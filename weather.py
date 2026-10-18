@@ -78,7 +78,7 @@ def main() -> None:
     request = Request(
         f"https://ntfy.sh/{NTFY_TOPIC}",
         data=message.encode("utf-8"),
-        headers={"Title": "東広島市の天気", "Priority": "default", "Tags": "partly_sunny"},
+        headers={"Title": "Higashihiroshima weather", "Priority": "default", "Tags": "partly_sunny"},
         method="POST",
     )
     with urlopen(request, timeout=25) as response:
